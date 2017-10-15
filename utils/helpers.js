@@ -74,7 +74,7 @@ export function getMetricsMetaInfo(metric: string) {
       unit: "miles",
       step: 1,
       type: "steppers",
-      getIcon: () => {
+      getIcon() {
         return (
           <View>
             <MaterialCommunityIcons name="bike" color="black" size={35} />
