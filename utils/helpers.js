@@ -1,7 +1,11 @@
-import React from 'react'
-import {View} from 'react-native'
-import {FontAwesome, MaterialIcons, MaterialCommunityIcons} from '@expo/vector-icons'
-import {white} from './colors'
+import React from "react";
+import { View } from "react-native";
+import {
+  FontAwesome,
+  MaterialIcons,
+  MaterialCommunityIcons
+} from "@expo/vector-icons";
+import { white } from "./colors";
 export function getMetricMetaInfo(metric) {
   const info = {
     run: {
@@ -123,79 +127,79 @@ export function timeToString(time = Date.now()) {
   return todayUTC.toISOString().split("T")[0];
 }
 
-export function getMetricsMetaInfo = (metric) => {
+export function getMetricsMetaInfo(metric) {
   const info = {
     run: {
-      displayName: 'Run',
+      displayName: "Run",
       max: 50,
-      unit: 'miles',
+      unit: "miles",
       step: 1,
-      type: 'steppers',
+      type: "steppers",
       getIcon() {
         return (
           <View>
-            <MaterialIcons name='directions-run' color='black' size={35} />
+            <MaterialIcons name="directions-run" color="black" size={35} />
           </View>
-        )
+        );
       }
     },
     bike: {
-      displayName: 'Bike',
+      displayName: "Bike",
       max: 100,
-      unit: 'miles',
+      unit: "miles",
       step: 1,
-      type: 'steppers',
+      type: "steppers",
       getIcon() {
         return (
           <View>
-            <MaterialCommunityIcons name='bike' color='black' size={35} />
+            <MaterialCommunityIcons name="bike" color="black" size={35} />
           </View>
-        )
+        );
       }
     },
     swim: {
-      displayName: 'Swim',
+      displayName: "Swim",
       max: 9900,
-      unit: 'meters',
+      unit: "meters",
       step: 100,
-      type: 'steppers',
+      type: "steppers",
       getIcon() {
         return (
           <View>
-            <MaterialCommunityIcons name='swim' color='black' size={35} />
+            <MaterialCommunityIcons name="swim" color="black" size={35} />
           </View>
-        )
+        );
       }
     },
     sleep: {
-      displayName: 'Sleep',
+      displayName: "Sleep",
       max: 24,
-      unit: 'hours',
+      unit: "hours",
       step: 1,
-      type: 'slider',
+      type: "slider",
       getIcon() {
         return (
           <View>
-            <FontAwesome name='bed' color='black' size={35} />
+            <FontAwesome name="bed" color="black" size={35} />
           </View>
-        )
+        );
       }
     },
     eat: {
-      displayName: 'Eat',
+      displayName: "Eat",
       max: 10,
-      unit: 'rating',
+      unit: "rating",
       step: 1,
-      type: 'slider',
+      type: "slider",
       getIcon() {
         return (
           <View>
-            <MaterialCommunityIcons name='food' color='black' size={35} />
+            <MaterialCommunityIcons name="food" color="black" size={35} />
           </View>
-        )
+        );
       }
-    },
-  }
+    }
+  };
 
-  return metric ? info[metric] : info
+  return metric ? info[metric] : info;
 }
